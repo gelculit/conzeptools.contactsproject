@@ -1,0 +1,149 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #721c24;
+  --input-color: #80868B;
+  --border-color: #DADCE0;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .75rem;
+}
+  
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+h1{
+  margin: 0;
+}
+
+.mainForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 100vh;
+}
+
+.contactForm {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 400px;
+	height: 100vh;
+	/*max-height: 750px;*/
+	border-radius: 1rem;
+	box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+				0 32px 64px -48px rgba(0, 0, 0, 0.5);			
+	
+}
+
+
+.contactHeader {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.compLogo {
+	
+	margin-bottom: 0;
+	padding-bottom: 0;
+	width: 90%;
+	/*border-bottom: 1px solid #e6e6e6;*/
+}
+
+.compLogoAddContact {
+	width: 40%;
+}
+
+.form__title{
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  /*text-align: center;
+  border-bottom: 1px solid #e6e6e6;*/
+}
+
+
+.contactButton {
+	/*display: flex;
+	flex-direction: row;  
+	
+	justify-content: space-around;
+	width: 100%;*/
+	border-bottom: 1px solid #e6e6e6;
+}
+
+
+.contactCard {
+	display: flex;
+	flex-direction: row;  /* determines the card display direction */
+	
+	justify-content: space-between;
+	height: 70px;
+	padding: 10px;
+	background: #eee;
+	box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+	
+	
+}
+
+.flow {
+	background: white;
+	width: 100%;
+	height: 100%;
+	padding: 1rem 1rem;
+	overflow-x: scroll;
+}
+
+.contactCard img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	/*margin-right: 20px;*/
+	object-fit: cover;
+	
+}
+
+
+.cardDetail {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around;
+	text-decoration: none;
+}
+
+.cardDetail a {
+	text-decoration: none;
+	color: black;
+}
+
+.cardDetail span {
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.flow a {
+	text-decoration: none;
+	color: black;
+}

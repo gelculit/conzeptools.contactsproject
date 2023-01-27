@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+	<body>
+	
+		<div class="mainForm">
+            <div class="contactForm">
+			
+				<div class="contactHeader">
+					<img class="compLogoAddContact" src="/logo.png">
+					
+				</div>
+				
+				<div class="flow">
+					
+					<!-- INPUT Fields -->
+					<div class="mainWrapper">
+						
+						<!-- input form for individual seafarer for scheduling  -->
+						<form action="/contacts/update/<%= listItems._id %>" method="POST">
+						
+						
+							<!-- Add image  -->
+							
+							<div class="picImage">
+
+								<div class="upload">
+									<img src="/emptyImage.png" alt="" id="image">
+											
+									
+											
+									<div class="leftRound" id="cancel" style="display: none;">
+										<i class="fa fa-times"></i>
+									</div>
+									
+									<div class="rightRound" id="upload">
+										<input type="file" name="fileImg" id="fileImg">
+										<i class="fa fa-camera"></i>
+									</div>
+											
+									<!--div class="rightRound" id="confirm" style="display: none;">
+										<input type="submit" name="" value="">
+										<i class="fa fa-check"></i>
+									</div-->
+								</div>
+							
+								
+							</div>
+
+							<!-- ./end Add image  -->
+						
+							<br><br>
+							
+							<!-- Input fields -->
+							<div class="form__group">
+								<input type="text" name="name" id="clearField" value="<%= listItems.name %>"  required>
+								<label for="email">Name</label>
+							</div> 
+									
+							<div class="form__group">
+								<input type="text" name="fone" id="clearField" value="<%= listItems.fone %>"  required>
+								<label for="email">Telephone Number</label>
+							</div> 
+
+							<div class="form__group">
+								<input type="text" name="email" id="clearField" value="<%= listItems.email %>"  required>
+								<label for="email">Email Address</label>
+							</div>
+
+							<div class="form__group">
+								<input type="text" name="mesName" id="clearField" value="<%= listItems.mesName %>"  required>
+								<label for="email">Messenger Name</label>
+							</div>
+												
+							<div class="form__group">
+								<input type="text" name="memo" id="clearField" value="<%= listItems.memo %>"  required>
+								<label for="email">Memo</label>
+							</div>
+							
+							<!-- ./end Input fields -->
+
+							<br>
+							
+							<button type="submit" class="btn btnDarkturquoise Clnbtn" >Update <span class="fas fa-chevron-right"></span></button>
+							
+								
+							
+							
+						
+						</form>
+						
+						<button type="" class="btn btnBlack Clnbtn btnClr" name="clear">Clear <span class="fas fa-chevron-right"></span></button>
+								
+						<a href="/" class="btn btnBrown Clnbtn"> Back <span class="fas fa-chevron-right"></span> </a>
+						
+					</div>		
+					
+				</div>
+			
+				
+			</div>	
+
+		</div>	
+
+		<script>
+			let btnClear = document.querySelector('.btnClr');
+			let inputs = document.querySelectorAll('input');
+			
+			btnClear.addEventListener('click', (e) => {
+				e.preventDefault();
+				inputs.forEach(input => input.value = '');
+			});
+		
+		</script>
+		
+		
+		<script type="text/javascript"> <!-- Select which picture to upload  -->
+			document.getElementById("fileImg").onchange = function(){
+				document.getElementById("image").src = URL.createObjectURL(fileImg.files[0]); // Preview new image
+				
+				document.getElementById("cancel").style.display = "block";
+				//document.getElementById("confirm").style.display = "block";
+				
+				document.getElementById("upload").style.display = "none";
+			}
+			
+			var userImage = document.getElementById("image").src;
+			document.getElementById("cancel").onclick = function(){
+				document.getElementById('image').src = userImage; //Back to previous image
+				
+				document.getElementById("cancel").style.display = "none";
+				//document.getElementById("confirm").style.display = "none";
+				
+				document.getElementById("upload").style.display = "block";
+			}
+		
+	</script>
+
+	</body>
+</html>

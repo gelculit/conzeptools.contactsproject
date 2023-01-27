@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+	
+	
+	--box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+	--box-shadow2: .5rem .5rem .7rem rgba(0, 0, 0, .3);
+	
+	--shadowColor: #dadce0;
+    --green:#16a085;
+    --black:#444;
+	--darkturquoise: #00CED1;
+    --light-color:#777;
+	--white:#fff;
+	--red:#FF0000;
+	--yellow: #FFFF00;
+	--darkRed: #8B0000;
+	
+	/*  additional colors */
+	
+	--blue: #0000FF;
+	--maroon: #800000;
+	--teal: #008080;
+	--brown: #A52A2A;
+	--cornflowerblue: #6495ED;
+	--crimson: #DC143C;
+	--darkblue: #00008B;
+	--darkcyan: #008B8B;
+	--darkgoldenrod: #B8860B;
+	--darkgreen: #006400;
+	--darkred: #8B0000;
+	--goldenrod: #DAA520;
+	--gray: #7F7F7F;
+	--lawngreen: #7CFC00;
+	--lightseagreen: #20B2AA;
+	--lightsteelblue: #B0C4DE;
+	--navyblue: #9FAFDF;
+	--orangered: #FF4500;
+	
+	/*  additional colors */
+	
+	
+    
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid var(--green);
+	
+	--borderBlack:.1rem solid var(--black);
+	--borderGreen:.1rem solid var(--green);
+	--borderDarkturquoise:.1rem solid var(--darkturquoise);
+	--borderRed:.1rem solid var(--red);
+	--borderYellow:.1rem solid var(--yellow);
+	--borderdarkRed:.1rem solid var(--darkRed);
+	
+	/*  additional borders / colors */
+	
+	--borderBlue:.1rem solid var(--blue);
+	--borderMaroon:.1rem solid var(--maroon);
+	--borderTeal:.1rem solid var(--teal);
+	--borderBrown:.1rem solid var(--brown);
+	--borderCornflowerblue:.1rem solid var(--cornflowerblue);
+	--borderCrimson:.1rem solid var(--crimson);
+	--borderDarkblue:.1rem solid var(--darkblue);
+	--borderDarkcyan:.1rem solid var(--darkcyan);
+	--borderDarkgoldenrod:.1rem solid var(--darkgoldenrod);
+	--borderDarkgreen:.1rem solid var(--darkgreen);
+	--borderDarkred:.1rem solid var(--darkred);
+	--borderGoldenrod:.1rem solid var(--goldenrod);
+	--borderGray:.1rem solid var(--gray);
+	--borderLawngreen:.1rem solid var(--lawngreen);
+	--borderLightseagreen:.1rem solid var(--lightseagreen);
+	--borderLightsteelblue:.1rem solid var(--lightsteelblue);
+	--borderNavyblue:.1rem solid var(--navyblue);
+	--borderOrangered:.1rem solid var(--orangered);
+	
+	/*  additional borders / colors */
+	
+	
+}
+
+.btn{
+    display: inline-block;
+    margin-bottom: 1rem;
+	margin-top: .5rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    /*border:var(--borderBlack);*/
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow2);
+    /*color:var(--black);*/
+    cursor: pointer;
+    font-size: .9rem;
+    background: #fff;
+	text-decoration: none;
+	
+}
+
+.btn span{
+	margin-left: .5rem;
+    padding:.5rem .7rem;
+    border-radius: .5rem;
+    /*background: var(--black);*/
+    color:#fff;
+    /*margin-left: .5rem;*/
+}
+
+
+/* Button Colors
+btnDarkBlue
+btnCrimson
+btnCornflowerblue
+btnBrown
+btnTeal
+btnMaroon
+btnBlue
+btnBlack
+btnGreen
+btnDarkturquoise
+btnRed
+btnYellow
+btndarkRed
+ Button Colors */
+
+
+
+
+/*** --darkblue button  ***/
+.btnDarkBlue {
+	border: var(--borderDarkblue);
+	color:var(--darkblue);
+}
+
+.btnDarkBlue span {
+	background: var(--darkblue);
+}
+
+.btnDarkBlue:hover{
+    background: var(--darkblue);
+    color:#fff;
+}
+
+.btnDarkBlue:hover span{
+    color: var(--darkblue);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** --crimson button  ***/
+.btnCrimson {
+	border: var(--borderCrimson);
+	color:var(--crimson);
+}
+
+.btnCrimson span {
+	background: var(--crimson);
+}
+
+.btnCrimson:hover{
+    background: var(--crimson);
+    color:#fff;
+}
+
+.btnCrimson:hover span{
+    color: var(--crimson);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** --cornflowerblue button  ***/
+.btnCornflowerblue {
+	border: var(--borderCornflowerblue);
+	color:var(--cornflowerblue);
+}
+
+.btnCornflowerblue span {
+	background: var(--cornflowerblue);
+}
+
+.btnCornflowerblue:hover{
+    background: var(--cornflowerblue);
+    color:#fff;
+}
+
+.btnCornflowerblue:hover span{
+    color: var(--cornflowerblue);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** --brown button  ***/
+.btnBrown {
+	border: var(--borderBrown);
+	color:var(--brown);
+}
+
+.btnBrown span {
+	background: var(--brown);
+}
+
+.btnBrown:hover{
+    background: var(--brown);
+    color:#fff;
+}
+
+.btnBrown:hover span{
+    color: var(--brown);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** --teal button  ***/
+.btnTeal {
+	border: var(--borderTeal);
+	color:var(--teal);
+}
+
+.btnTeal span {
+	background: var(--teal);
+}
+
+.btnTeal:hover{
+    background: var(--teal);
+    color:#fff;
+}
+
+.btnTeal:hover span{
+    color: var(--teal);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** --maroon button  ***/
+.btnMaroon {
+	border: var(--borderMaroon);
+	color:var(--maroon);
+}
+
+.btnMaroon span {
+	background: var(--maroon);
+}
+
+.btnMaroon:hover{
+    background: var(--maroon);
+    color:#fff;
+}
+
+.btnMaroon:hover span{
+    color: var(--maroon);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+/*** blue button  ***/
+.btnBlue {
+	border: var(--borderBlue);
+	color:var(--blue);
+}
+
+.btnBlue span {
+	background: var(--blue);
+}
+
+.btnBlue:hover{
+    background: var(--blue);
+    color:#fff;
+}
+
+.btnBlue:hover span{
+    color: var(--blue);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+
+
+/*** black button  ***/
+.btnBlack {
+	border: var(--borderBlack);
+	color:var(--black);
+}
+
+.btnBlack span {
+	background: var(--black);
+}
+
+.btnBlack:hover{
+    background: var(--black);
+    color:#fff;
+}
+
+.btnBlack:hover span{
+    color: var(--black);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** green button  ***/
+.btnGreen {
+	border: var(--borderGreen);
+	color:var(--green);
+}
+
+.btnGreen span {
+	background: var(--green);
+}
+
+.btnGreen:hover{
+    background: var(--green);
+    color:#fff;
+}
+
+.btnGreen:hover span{
+    color: var(--green);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** darkturquoise button  ***/
+.btnDarkturquoise {
+	border: var(--borderDarkturquoise);
+	color:var(--green);
+}
+
+.btnDarkturquoise span {
+	background: var(--darkturquoise);
+}
+
+.btnDarkturquoise:hover{
+    background: var(--darkturquoise);
+    color:#fff;
+}
+
+.btnDarkturquoise:hover span{
+    color: var(--darkturquoise);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** red button  ***/
+.btnRed {
+	border: var(--borderRed);
+	color:var(--red);
+}
+
+.btnRed span {
+	background: var(--red);
+}
+
+.btnRed:hover{
+    background: var(--red);
+    color:#fff;
+}
+
+.btnRed:hover span{
+    color: var(--red);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** yellow button  ***/
+.btnYellow {
+	border: var(--borderYellow);
+	color:var(--yellow);
+}
+
+.btnYellow span {
+	background: var(--yellow);
+}
+
+.btnYellow:hover{
+    background: var(--yellow);
+    color:#fff;
+}
+
+.btnYellow:hover span{
+    color: var(--yellow);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}
+
+/*** darkRed button  ***/
+.btndarkRed {
+	border: var(--borderdarkRed);
+	color:var(--darkRed);
+}
+
+.btndarkRed span {
+	background: var(--darkRed);
+}
+
+.btndarkRed:hover{
+    background: var(--darkRed);
+    color:#fff;
+}
+
+.btndarkRed:hover span{
+    color: var(--darkRed);
+    background:#fff;
+    /*margin-left: 1rem;*/
+}

@@ -1,0 +1,57 @@
+
+.upload
+{
+	position: relative;
+			
+}
+
+.upload img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+	/*border: 1px solid #dadce0;*/
+}
+		
+.upload .rightRound {
+	position: absolute;
+	bottom: -1.5rem;
+	right: -2rem;
+	background: cadetblue;
+	width: 7rem;
+	height: 7rem;
+	line-height: 8rem;
+	text-align: center;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+		
+.upload .leftRound {
+	position: absolute;
+	bottom: -1.5rem;
+	right: -2rem;
+	background: #6495ED;
+	width: 7rem;
+	height: 7rem;
+	line-height: 8rem;
+	text-align: center;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+		
+.upload .fa {
+	font-size: 3rem;
+	color: white;
+}
+	
+.upload input {
+	position: absolute;
+	transform: scale(2);
+	opacity: 0;
+}
+
+		
+.upload input::webkit-file-upload-button, .upload input[type=submit]{
+	cursor: pointer;
+}

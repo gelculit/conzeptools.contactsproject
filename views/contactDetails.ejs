@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <div class="mainForm">
+            <div class="contactForm">
+			
+				<div class="contactHeader">
+					<img class="compLogo" src="/logo.png">
+					<!--h1 class="form__title">POS Store Registration</h1>
+					
+					div class="error-txt">This is an error message!</div-->
+					<ul id="form-messages"></ul>
+					<h1 class="form__title"><%= listItems.name %></h1>	
+				</div>
+				
+				<div class="flow">
+				<!--
+					<a href="tel:<%= listItems.fone %>">+63 917 822 3655</a>
+				-->
+					<a href="tel:<%= listItems.fone %>">
+						<div class="contactCard">
+							<img src="/a1.png" alt=""/>
+							<div  class="cardDetail">CALL</div>
+							<div class="cardDetail fone">
+								<%= listItems.fone %>
+							</div>
+						</div>
+					</a>
+
+
+					<!--
+					<div class="contactCard">
+						<div class="cardDetail">
+							<p>Id:<%= listItems._id %></p>
+						</div>
+					</div>
+					-->
+
+
+					
+					<div class="contactCard">
+						<div class="cardDetail">
+							<p>Email address:<%= listItems.email %></p>
+						</div>
+					</div>
+
+					<div class="contactCard">
+						<div class="cardDetail">
+							<p>messenger name: <%= listItems.mesName %></p>
+						</div>
+					</div>
+
+					<div class="contactCard">
+						<div class="cardDetail">
+							<p>Any memo : <%= listItems.memo %></p>
+						</div>
+					</div>
+					
+					<br>
+					<div>
+						<a href="/contacts" class="btn btnBlack"> Back <span class="fas fa-chevron-left"></span> </a>
+						<a href="/contacts/update/<%= listItems._id %>" class="btn btnBlack"> Edit <span class="fas fa-chevron-right"></span> </a>
+						<a class="btn btnBlack delete" data-doc="<%= listItems._id %>"> Delete<span class="fas fa-chevron-right"></span> </a>
+					</div>
+				
+				</div>
+				
+				
+				
+			</div>		
+
+			
+			
+		</div>	
+
+		<script>
+
+			const trashcan = document.querySelector('a.delete');
+
+			trashcan.addEventListener('click', (e) => {
+				const endpoint = `/contacts/${trashcan.dataset.doc}`;
+
+				fetch(endpoint, {
+					method: 'DELETE'
+				})
+				.then((response) => response.json())
+				.then((data) => window.location.href = data.redirect)
+				.catch((err) => console.log(err));
+
+			})
+
+		</script>
+	
+		
+    </body>
+</html>

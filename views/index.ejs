@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+    <body>
+        <div class="mainForm">
+            <div class="contactForm">
+			
+				<div class="contactHeader">
+					<a href="/about"><center><img class="compLogo" src="logo.png"></center></a>
+					<a href="/contacts/addList" class="btn btnBlack"> Add <span class="fas fa-chevron-right"></span> </a>
+					
+				</div>
+				
+				<div class="flow">
+				
+					<% if (listItems.length > 0) { %>
+
+						<% listItems.forEach(listItem => { %>
+
+							
+							<a class="single" href="/contacts/<%= listItem._id %>"><!--will render contactDetails.html-->
+								<div class="contactCard">
+								
+									<img src="/a1.png" alt=""/>
+									<div class="cardDetail">
+										<span><%= listItem.name %></span>
+									</div>
+								
+								</div>
+
+							</a>
+
+						<% }) %>
+
+					<% }  else { %>
+                        <p>List is empty</p>
+                <% } %>
+
+				
+				
+				
+				</div>
+				
+			</div>		
+			
+			
+		</div>	
+	
+		
+    </body>
+</html>

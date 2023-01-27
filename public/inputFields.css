@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/*
+:root {
+	--primary-color: #2b72bf; /* wmoc blue 
+	--secondary-color: #dadce0;
+	--wmoc-blue:#2b72bf;
+	--padding:2rem 9%;
+	--paddingShort:2rem 25%;
+	
+	--back-layer:rgba(0,0,0,.4);
+	--inFocus: #8B0000;
+}
+
+html {
+	font-size: .75rem;
+}
+
+*/
+
+
+/***********essentials**************/
+
+.mainWrapper {
+	width: 100%;
+	padding: var(--padding);
+	padding: 2rem 9%;
+	
+}
+
+
+input {             /*input box height*/
+	height: 2.5rem;
+}
+
+
+
+form .form__group {
+	height: 4rem; /*height of the form container, affects the distance between input forms (4.5 orig)*/
+	margin-bottom: .95rem; /* creates distance between column form */
+}
+
+form .form__group input{
+	padding: 1.8rem;
+	border: 2px solid var(--secondary-color);
+	display: block;
+	width: 100%;
+	outline: solid;  /**********************************************/
+	outline-color: gray;
+	outline-width: thin;
+	border-radius: .8rem;
+	font-size: 1rem; /* inside label font size */
+}
+
+form .form__group label {
+	display: block;
+	transform: translate(1rem, -2.9rem); /* Places the label inside the form */
+	font-size: 1.25rem;
+	pointer-events: none;
+	transition: .2s ease;
+	color: #979797;
+}
+
+
+form .uplabel label {
+	display: block;
+	transform: translate(-2rem, -5.5rem); /* Places the label inside the form */
+	font-size: .75rem;
+	pointer-events: none;
+	transition: .2s ease;
+	color: #979797;
+	padding-top: 0.5rem;
+
+}
+
+
+/*** form border color turns blue ***/
+form .form__group input:focus {
+	border: 2px solid var(--inFocus);
+}
+
+
+form .form__group select:focus {
+	border: 2px solid var(--primary-color);
+}
+
+
+/********this creates the label animation going on top when clicked********/
+form .form__group input:focus + label {
+	/*transform: translate(14rem, -7.2rem);*/
+	transform: translate(1rem, -4.8rem); /* -7.2 aligns small label to the borderline */
+	color: var(--inFocus); /* small label color  */
+	display: inline-block;
+	font-size: .75rem; /* small label font size  */
+	padding: .5rem;
+	background-color: #fff;
+}
+/****************************************************************************/
+
+
+/***  This makes sure that if entry is valid it will stay in the form   ***/
+form .form__group input:valid {
+	border: 2px solid var(--inFocus);
+	font-size: 1.2rem;    /****added jan 24, 2023********************************************************/
+}
+
+/*form .form__group select:valid {
+	border: 2px solid var(--primary-color);
+}*/
+
+
+/***  This makes sure that if entry is valid it will stay in the form   ***/
+
+form .form__group input:valid + label {  /****input is valid + label size and position*****/
+	transform: translate(1rem, -4.8rem);
+	display: inline-block;
+	font-size: .75rem;
+	padding: .5rem;
+	background-color: #fff;
+	color: var(--inFocus);
+}
+
+
+a {
+	color: var(--primary-color);
+	/*font-weight: bold;*/
+}
